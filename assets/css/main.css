@@ -175,7 +175,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2rem 0;
+		margin: 0 0 0rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -184,7 +184,7 @@ input, select, textarea {
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.1rem;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -215,11 +215,11 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 
 	h4 {
-		font-size: 0.8rem;
+		font-size: 1rem;
 	}
 
 	h5 {
@@ -841,6 +841,35 @@ input, select, textarea {
 			margin-bottom: 10px
 		}
 	}
+
+/* Box For Education */
+	.box1 {
+		margin: 20px;
+		border : 10px;
+		padding: 5px;
+		font-size: 22px;
+		width: 459px;
+		
+	
+	}
+
+	.info 
+	{
+		color: rgb(0, 0, 0);
+		background: rgba(0, 38, 255, 0.623);
+		border: 1px solid rgb(162, 0, 255);
+	}
+
+	.div2
+	{
+		width: 300px;
+		height: 100px;
+		padding: 50px;
+		border: 1px solid red;
+		box-sizing: border-box;
+	}
+
+
 			
 
 /* Box */
