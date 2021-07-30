@@ -583,14 +583,22 @@ input, select, textarea {
 	}
 
 /*TimeLine*/
+
+	
+
 	body{
 		background-color: #f7f7f7;
-		margin-top:20px;
-	}
+		margin-top:20px;		
+		}
+
+		
 
 	.main-timeline {
-		position: relative
-	}
+		position: relative	
+		
+		}
+
+	
 
 	.main-timeline:before {
 		content: "";
@@ -776,7 +784,7 @@ input, select, textarea {
 		text-align: right
 	}
 
-	@media only screen and (max-width: 991px) {
+	@media only screen and (max-width: 768px) {
 		.main-timeline .date-content {
 			margin-top: 35px
 		}
@@ -794,7 +802,17 @@ input, select, textarea {
 		}
 	}
 
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: 480px) {
+
+
+		
+
+		.main-timeline .timeline-content 
+		{
+				width: 50%;
+				padding: 20px 0 20px 50px;
+				float: right
+		}
 		.main-timeline:before {
 			margin: 0;
 			left: 7px
@@ -810,11 +828,12 @@ input, select, textarea {
 		}
 		.main-timeline .date-content {
 			width: 95%;
+			
 			float: right;
-			margin-top: 0
+			margin-top: 0;
 		}
 		.main-timeline .date-content:before {
-			display: none
+			display: none	
 		}
 		.main-timeline .date-outer {
 			width: 110px;
@@ -829,7 +848,7 @@ input, select, textarea {
 			top: 30%
 		}
 		.main-timeline .year {
-			font-size: 24px
+			font-size: 13px
 		}
 		.main-timeline .timeline-content,
 		.main-timeline .timeline:nth-child(2n) .timeline-content {
@@ -838,7 +857,7 @@ input, select, textarea {
 			padding: 10px 0
 		}
 		.main-timeline .title {
-			margin-bottom: 10px
+			margin-bottom: 13px
 		}
 	}
 
@@ -868,6 +887,38 @@ input, select, textarea {
 		border: 1px solid red;
 		box-sizing: border-box;
 	}
+
+	@media only screen and (max-width: 480px)
+	 {
+		.box1 {
+			margin: 20px;
+			border : 10px;
+			padding: 5px;
+			font-size: 20px;
+			width: 284px;
+		}
+
+		.info 
+	{
+		color: rgb(0, 0, 0);
+		background: rgba(0, 38, 255, 0.623);
+		border: 1px solid rgb(162, 0, 255);
+	}
+
+	.div2
+	{
+		width: 300px;
+		height: 100px;
+		padding: 50px;
+		border: 1px solid red;
+		box-sizing: border-box;
+	}
+
+	 }
+
+
+		
+		
 
 
 			
@@ -1958,3 +2009,11 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+	@media (min-width : 900px)
+	{ 
+		body{
+			
+		}
+		
+	}
