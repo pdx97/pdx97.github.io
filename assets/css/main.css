@@ -299,7 +299,18 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
-
+	.button1 {
+		background-color:rgb(0, 0, 255); /* Blue*/
+		border: none;
+		width:100%;
+		color: white;
+		padding: 26px 13px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 200px;
+	  }
 
 /* Form */
 
@@ -871,7 +882,7 @@ input, select, textarea {
 	.info 
 	{
 		color: rgb(0, 0, 0);
-		background: rgba(0, 38, 255, 0.623);
+		background: rgb(0, 0, 255);
 		border: 1px solid rgb(162, 0, 255);
 	}
 
@@ -897,7 +908,7 @@ input, select, textarea {
 		.info 
 	{
 		color: rgb(0, 0, 0);
-		background: rgba(0, 38, 255, 0.623);
+		background: rgb(0, 0, 255);
 		border: 1px solid rgb(162, 0, 255);
 	}
 
