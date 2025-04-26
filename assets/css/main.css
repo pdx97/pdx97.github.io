@@ -656,9 +656,8 @@ input, select, textarea {
 	}
 
 	.main-timeline .icon:before {
-		background: blue;
-		border: 2px solid #232323;
-		left: -3px
+	    background: #00ff90;
+	    border: 2px solid white;
 	}
 
 	.main-timeline .icon:after {
@@ -759,9 +758,27 @@ input, select, textarea {
 	}
 
 	.main-timeline .timeline-content {
-		width: 50%;
-		padding: 20px 0 20px 50px;
-		float: right
+	    width: 50%;
+	    padding: 20px;
+	    float: right;
+	    background: #1f1f1f;
+	    border-radius: 15px;
+	    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+	    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	
+	.main-timeline .timeline-content:hover {
+	    transform: translateY(-5px);
+	    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+	}
+	
+	.main-timeline .timeline-content h5.title {
+	    color: #00ff90;
+	}
+	
+	.main-timeline .timeline-content p.description {
+	    color: #cccccc;
+	    font-size: 15px;
 	}
 
 	.main-timeline .title {
@@ -839,9 +856,11 @@ input, select, textarea {
 			float: right;
 			margin-top: 0;
 		}
-		.main-timeline .date-content:before {
-			display: none	
+		.main-timeline .date-outer:before {
+		    background: #1b1f22;
+		    border: 2px solid #00ff90;
 		}
+
 		.main-timeline .date-outer {
 			width: 110px;
 			height: 110px
