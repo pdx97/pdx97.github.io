@@ -1997,60 +1997,64 @@ input, select, textarea {
 		    color: #999;
 		    margin-bottom: 0.5rem;
 		}
-
-	.steps-container {
-	  display: flex;
-	  flex-direction: column;
-	  gap: 2rem;
-	  margin-top: 2rem;
-	}
-	
-	.step {
-	  display: flex;
-	  align-items: flex-start;
-	  gap: 1.5rem;
-	  position: relative;
-	}
-	
-	.step-marker {
-	  flex-shrink: 0;
-	  width: 40px;
-	  height: 40px;
-	  background-color: #00ff90;
-	  border-radius: 50%;
-	  color: black;
-	  font-weight: bold;
-	  font-size: 1.2rem;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	}
-	
-	.step-details {
-	  background: #1f1f1f;
-	  padding: 1rem 1.5rem;
-	  border-radius: 10px;
-	  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-	  width: 100%;
-	}
-	
-	.step-details h3 {
-	  color: #00ff90;
-	  margin-bottom: 0.5rem;
-	}
-	
-	.step-details h4 {
-	  color: #ccc;
-	  font-weight: normal;
-	  margin-bottom: 0.5rem;
-	}
-	
-	.exp-duration {
-	  font-size: 0.9rem;
-	  color: #aaa;
-	  font-style: italic;
-	  margin-bottom: 0.75rem;
-	}
+		.education-timeline {
+		  position: relative;
+		  padding-left: 2.5rem;
+		  border-left: 3px solid #00ff90;
+		  margin-top: 2rem;
+		}
+		
+		.edu-step {
+		  position: relative;
+		  margin-bottom: 3rem;
+		}
+		
+		.step-dot {
+		  position: absolute;
+		  left: -1.4rem;
+		  top: 0;
+		  width: 2rem;
+		  height: 2rem;
+		  background-color: #00ff90;
+		  border-radius: 50%;
+		  font-weight: bold;
+		  color: black;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  font-size: 1rem;
+		  box-shadow: 0 0 10px rgba(0, 255, 144, 0.5);
+		}
+		
+		.edu-content {
+		  background: #1f1f1f;
+		  padding: 1.25rem 1.5rem;
+		  border-radius: 12px;
+		  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+		  transition: transform 0.3s ease;
+		}
+		
+		.edu-content:hover {
+		  transform: translateY(-5px);
+		}
+		
+		.edu-content h3 {
+		  color: #00ff90;
+		  margin-bottom: 0.25rem;
+		}
+		
+		.edu-content h4 {
+		  color: #ccc;
+		  font-weight: normal;
+		  margin-bottom: 0.5rem;
+		}
+		
+		.edu-duration {
+		  font-style: italic;
+		  color: #aaa;
+		  font-size: 0.9rem;
+		  margin-bottom: 0.75rem;
+		}
 
 
 
