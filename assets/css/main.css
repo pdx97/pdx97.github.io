@@ -1998,6 +1998,60 @@ input, select, textarea {
 		    margin-bottom: 0.5rem;
 		}
 
+	.steps-container {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 2rem;
+	  margin-top: 2rem;
+	}
+	
+	.step {
+	  display: flex;
+	  align-items: flex-start;
+	  gap: 1.5rem;
+	  position: relative;
+	}
+	
+	.step-marker {
+	  flex-shrink: 0;
+	  width: 40px;
+	  height: 40px;
+	  background-color: #00ff90;
+	  border-radius: 50%;
+	  color: black;
+	  font-weight: bold;
+	  font-size: 1.2rem;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	
+	.step-details {
+	  background: #1f1f1f;
+	  padding: 1rem 1.5rem;
+	  border-radius: 10px;
+	  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	  width: 100%;
+	}
+	
+	.step-details h3 {
+	  color: #00ff90;
+	  margin-bottom: 0.5rem;
+	}
+	
+	.step-details h4 {
+	  color: #ccc;
+	  font-weight: normal;
+	  margin-bottom: 0.5rem;
+	}
+	
+	.exp-duration {
+	  font-size: 0.9rem;
+	  color: #aaa;
+	  font-style: italic;
+	  margin-bottom: 0.75rem;
+	}
+
 
 
 /* Footer */
