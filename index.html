@@ -1,575 +1,186 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prakhar Dixit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
 
-<html>
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Prakhar Dixit</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1 class="hero-name">Prakhar Dixit</h1>
+      <p class="hero-title">PhD Student · Reinforcement Learning &amp; Maths Reasoning · UMBC</p>
+      <p class="hero-bio">
+        PhD student in Computer Science at UMBC specializing in Machine Learning, Reinforcement Learning,
+        and Mathematical Reasoning in LLMs. My research focuses on enhancing reasoning in LLMs,
+        improving RL sample efficiency, and developing Sim2Real frameworks — with publications at
+        NeurIPS, AAAI, and RSS.
+      </p>
+      <div class="hero-actions">
+        <a href="publications.html" class="btn btn-primary">Publications</a>
+        <a href="Docs/resume_prakhar_dixit_April2026.pdf" download class="btn btn-outline">
+          <i class="fa fa-download"></i> Download CV
+        </a>
+        <a href="contact.html" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <!-- Replace with your headshot: <img src="images/your-photo.jpg" alt="Prakhar Dixit" /> -->
+      <span class="photo-placeholder"><i class="fa fa-user"></i></span>
+    </div>
+  </div>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="fas fa-briefcase"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Hello World, This is Prakhar</h1>
-								<p>A place which showcases my Projects, Work Experience and All the other Fun Stuff About me.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">About Me</a></li>
-								<li><a href="#work">Experience</a></li>
-								<li><a href="#project">Projects</a></li>
-								<li><a href="#education">Education</a></li>
-								<li><a href="#resume">Resume</a></li>
-								<li><a href="#contact">Contact</a></li>
+  <div class="page">
 
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+    <!-- Research Interests -->
+    <div class="section">
+      <p class="section-title">Research Interests</p>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <div class="icon">🧠</div>
+          <h3>LLMs &amp; Mathematical Reasoning</h3>
+          <p>Enhancing math reasoning capabilities in large language models using RLHF and schema-based instruction.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">🤖</div>
+          <h3>Reinforcement Learning</h3>
+          <p>Deep RL, hierarchical agents, Sim2Real transfer, graph attention in R-GCN frameworks, sample efficiency.</p>
+        </div>
+        <div class="interest-card">
+          <div class="icon">👁️</div>
+          <h3>Computer Vision &amp; Robotics</h3>
+          <p>YOLO-based object detection, autonomous drone navigation, real-world RL deployment.</p>
+        </div>
+      </div>
+    </div>
 
-				<!-- Main -->
-					<div id="main">
+    <hr class="divider" />
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/coder3.gif" width="100"
-									height="300"
-									 alt="" /></span>
-								<p>Hey there, My name is Prakhar Dixit , I am currently a Computer Science Grad Student at the <a href="https://www.umbc.edu/" style="color:rgb(0, 255, 0)" >University Of Maryland Baltimore County</a>.</p>
-								<p> I am a passionate Techie who loves to learn and explore new things. I am intrigued how technologies and its solutions are helping the world. By the way, check out my <a href="#project" style="color:rgb(0, 255, 0)">awesome work</a></p>
-								<p> My major fields of interests Include Machine Learning , Image Processing and Computer Vision😀.</p>
-							</article>
+    <!-- Recent News -->
+    <div class="section">
+      <p class="section-title">Recent Highlights</p>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="news-date">Mar 2026</span>
+          <span class="news-text">Paper accepted at <strong>IGARSS 2026</strong> — WildfireVLM: AI-powered Early Wildfire Detection and Risk Assessment Using Satellite Imagery.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Jul 2025</span>
+          <span class="news-text">Published SOTA results on <strong>LongMemEval</strong> benchmark (86% accuracy, +15% over previous SOTA) at Emergence AI.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Dec 2024</span>
+          <span class="news-text">Paper accepted at <strong>NeurIPS 2024</strong> — SBI-RAG: Enhancing Math Word Problem Solving via Schema-Based Instruction and RAG.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Sep 2024</span>
+          <span class="news-text">PhD thesis published on ProQuest — Dynamic Edge Weighting in R-GCN for Sample Efficiency in RL.</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">Feb 2023</span>
+          <span class="news-text">Paper accepted at <strong>AAAI 2023</strong> — ReProHRL: Multi-Goal Navigation using Hierarchical Agents.</span>
+        </div>
+      </div>
+    </div>
 
-						<!-- Work
-							<article id="work">
-								<h2 class="major">Experience</h2>
-								<span class="image main"><a href="https://en.wikipedia.org/wiki/Titan_Company"><img src="images/Titan.gif" width="100"
-									height="300" alt="" /></a></span>
-								<h3><b>TITAN Company Limited|Software Engineer</b></h3>
-								<h4>Bangalore , India | July 2019 – April 2021</h4>
-								<ul>
-									<li>Built a module for a Web Application using Spring Boot and Rest APIs which helped more than 8000 employees to
-										visualize their Assets data stored in Oracle DB.</li>
-									<li> Built a dashboard using Python and its framework Plotly which was used to derive insights and analyse the daily Logins
-										happening on the Web Application.</li>
+    <hr class="divider" />
 
-								</ul>
+    <!-- Featured Projects -->
+    <div class="section">
+      <p class="section-title">Featured Projects</p>
+      <div class="projects-grid">
 
-								<span class="image main"><a href="https://nus.edu.sg/"><img src="images/nus_960x320.jpg" width="100"
-									height="300" alt="" /></a></span>
-								<h3><b>National University of Singapore|Research Intern</b></h3>
-								<h4>Kent Ridge , Singapore| June 2018 – July 2019</h4>
-								<ul>
-									<li> Researched in the field of big data and deep learning.</li>
-									<li> Worked on Credit card fraud detection dataset and achieved an accuracy score of 0.985 using logistic regression which
-										outperformed ANN, random forest, decision tree, Support vector machines (SVM).</li>
+        <div class="project-card">
+          <h3>ScholarAgent</h3>
+          <p>An AI agent that fetches recent ArXiv research papers based on search — like Google Scholar but more user-friendly and readable.</p>
+          <div class="tags">
+            <span class="tag">Agentic AI</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">ArXiv API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/pdx97" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
-								</ul>
+        <div class="project-card">
+          <h3>LLM Detect AI Text</h3>
+          <p>ML model to detect whether an essay was written by a student or an LLM. Finished in the top 25% of the Kaggle leaderboard.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/pdx97" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
-							<!-- Experience Section (Updated Modern Chronological Cards) -->
-							<article id="work">
-							  <h2 class="major">Experience</h2>
-							  <div class="experience-grid">
-							
-							    <!-- 2025 - Emergence AI -->
-							    <div class="experience-card">
-							      <div class="exp-header">
-							        <img src="images/emergence_ai_logo.png" alt="Emergence AI" class="exp-logo">
-							        <div>
-							          <h3>Summer Research Intern</h3>
-							          <h4>Emergence AI</h4>
-							          <p class="exp-duration">May 2025 - Aug 2025</p>
-							        </div>
-							      </div>
-							      <p>Developed AI agents for autonomous enterprise systems, focused on planning and self-improvement in multi-agent environments.</p>
-							      <p><b>Technologies:</b> AI Agents, Multi-Agent Systems, Autonomous Planning</p>
-							    </div>
-							
-							    <!-- 2022 - Present - UMBC Research Assistant -->
-							    <div class="experience-card">
-							      <div class="exp-header">
-							        <img src="images/UMBC1.png" alt="UMBC" class="exp-logo">
-							        <div>
-							          <h3>Graduate Research Assistant</h3>
-							          <h4>University of Maryland Baltimore County</h4>
-							          <p class="exp-duration">Jan 2022 - Present</p>
-							        </div>
-							      </div>
-							      <p>Research in LLM mathematical reasoning, YOLO-based Sim2Real reinforcement learning, and Graph Attention Networks for sample efficiency improvements.</p>
-							      <p><b>Technologies:</b> YOLO, RLHF, Graph Neural Networks, LLMs</p>
-							    </div>
-							
-							    <!-- 2021 - Graduate Assistant -->
-							    <div class="experience-card">
-							      <div class="exp-header">
-							        <img src="images/UMBC1.png" alt="UMBC" class="exp-logo">
-							        <div>
-							          <h3>Graduate Assistant</h3>
-							          <h4>University of Maryland Baltimore County</h4>
-							          <p class="exp-duration">Aug 2021 - Dec 2021</p>
-							        </div>
-							      </div>
-							      <p>Assisted teaching CMSC 691.4 (Data Science) through grading, mentoring, and project-based support for 50+ graduate students.</p>
-							      <p><b>Technologies:</b> Data Science, Python, Student Mentorship</p>
-							    </div>
-							
-							    <!-- 2019-2021 - Titan Company -->
-							    <div class="experience-card">
-							      <div class="exp-header">
-							        <img src="images/Titan.gif" alt="Titan Company" class="exp-logo">
-							        <div>
-							          <h3>Software Engineer</h3>
-							          <h4>Titan Company Limited</h4>
-							          <p class="exp-duration">Jul 2019 - Apr 2021</p>
-							        </div>
-							      </div>
-							      <p>Built enterprise web apps using Spring Boot and OracleDB, and developed analytical dashboards using Python and Plotly for real-time insights.</p>
-							      <p><b>Technologies:</b> Java, Spring Boot, REST APIs, Python, OracleDB</p>
-							    </div>
-							
-							    <!-- 2019 - Titan Company Internship -->
-							    <div class="experience-card">
-							      <div class="exp-header">
-							        <img src="images/Titan.gif" alt="Titan Internship" class="exp-logo">
-							        <div>
-							          <h3>Software Engineer Intern</h3>
-							          <h4>Titan Company Limited</h4>
-							          <p class="exp-duration">Mar 2019 - Jun 2019</p>
-							        </div>
-							      </div>
-							      <p>Contributed to BPM and enterprise system development cycles, focused on application testing, optimization, and bug reduction strategies.</p>
-							      <p><b>Technologies:</b> Java, Software Testing, BPM Tools</p>
-							    </div>
-							
-							    <!-- 2018 - NUS Internship -->
-							    <div class="experience-card">
-							      <div class="exp-header">
-							        <img src="images/nus_960x320.jpg" alt="NUS" class="exp-logo">
-							        <div>
-							          <h3>Research Intern</h3>
-							          <h4>National University of Singapore</h4>
-							          <p class="exp-duration">Jun 2018 - Jul 2018</p>
-							        </div>
-							      </div>
-							      <p>Worked on machine learning models for credit card fraud detection achieving 90.5% model accuracy, and optimized preprocessing pipelines for efficiency.</p>
-							      <p><b>Technologies:</b> Python, Machine Learning, Data Preprocessing</p>
-							    </div>
-							
-							  </div>
-							</article>
+        <div class="project-card">
+          <h3>ISS_Info</h3>
+          <p>Python package fetching real-time International Space Station data. Over <strong>60,000 downloads</strong> on PyPI.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">PyPI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Quarantine-Projects/ISS_Info" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <h3>Deep Learning Steering Model</h3>
+          <p>Self-driving prototype using CNNs and OpenCV to predict steering angles from dash-cam image inputs.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">CNN</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/pdx97/Deep-learning-steering-model" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
+      </div>
+      <p style="margin-top:1.25rem; font-size:0.875rem; color:#64748b;">
+        <a href="projects.html">See all projects →</a>
+      </p>
+    </div>
 
+  </div>
 
+  <footer>
+    <p>
+      © 2026 Prakhar Dixit &nbsp;·&nbsp;
+      <a href="https://github.com/pdx97" target="_blank"><i class="fab fa-github"></i> pdx97</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/prakhardixit250697/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp;·&nbsp;
+      <a href="mailto:prakhhar1997@gmail.com"><i class="fa fa-envelope"></i> Email</a>
+    </p>
+  </footer>
 
-
-
-							<!-- Projects -->
-							<article id="project">
-							    <h2 class="major">Projects</h2>
-							    <div class="projects-grid">
-							
-							        <!-- Project 1 -->
-							        <div class="project-card">
-							            <h3>Explorer 🚀</h3>
-							            <p>An Android app that helps visually impaired users localize objects within a frame using camera input.</p>
-							            <p><b>Technologies:</b> Android Studio, Java, OpenCV</p>
-							            <a class="btn" href="https://github.com/pdx97/explorer" target="_blank">View Project</a>
-							        </div>
-							
-							        <!-- Project 2 -->
-							        <div class="project-card">
-							            <h3>Deep Learning Steering Model 🛻</h3>
-							            <p>Built a self-driving prototype using CNNs and OpenCV to predict steering angles based on image inputs.</p>
-							            <p><b>Technologies:</b> Python, TensorFlow, OpenCV</p>
-							            <a class="btn" href="https://github.com/pdx97/Deep-learning-steering-model" target="_blank">View Project</a>
-							        </div>
-							
-							        <!-- Project 3 -->
-							        <div class="project-card">
-							            <h3>ISS_Info 📡</h3>
-							            <p>A Python package that fetches real-time International Space Station data. 14,000+ downloads on PyPI!</p>
-							            <p><b>Technologies:</b> Python, REST APIs</p>
-							            <a class="btn" href="https://github.com/Quarantine-Projects/ISS_Info" target="_blank">View Project</a>
-							        </div>
-							
-							        <!-- Project 4 -->
-							        <div class="project-card">
-							            <h3>Lane Detection 🛣️</h3>
-							            <p>Hand-crafted computer vision techniques to identify road lanes as part of a self-driving car project.</p>
-							            <p><b>Technologies:</b> Python, OpenCV</p>
-							            <a class="btn" href="https://github.com/pdx97/Lane_Detection_Using_Computer_Vision" target="_blank">View Project</a>
-							        </div>
-							
-							        <!-- Project 5 -->
-							        <div class="project-card">
-							            <h3>Credit Card Fraud Detection 💳</h3>
-							            <p>Achieved 98.5% accuracy identifying fraudulent transactions with ML models. Presented at NUS.</p>
-							            <p><b>Technologies:</b> Python, Scikit-learn, Logistic Regression</p>
-							            <a class="btn" href="https://github.com/pdx97/credit_card_fraud_detection" target="_blank">View Project</a>
-							        </div>
-							
-							    </div>
-							</article>
-
-
-						<!-- About -->
-							<!-- Education Section - Modern Card Layout -->
-							<article id="education">
-							  <h2 class="major">Education</h2>
-							  <div class="education-grid">
-							
-							    <!-- PhD -->
-							    <div class="education-card">
-							      <div class="edu-header">
-							        <img src="images/UMBC1.png" alt="UMBC" class="edu-logo">
-							        <div>
-							          <h3>Ph.D. in Computer Science</h3>
-							          <h4>University of Maryland, Baltimore County</h4>
-							          <p class="edu-duration">Aug 2025 – Present</p>
-							        </div>
-							      </div>
-							      <p>Research in LLM mathematical reasoning, Graph-based RL, and Vision-Language Models.</p>
-							      <p><b>Focus Areas:</b> Explainable AI, Schema-based Planning, LLM Agents</p>
-							      <a class="button primary" href="https://goo.gl/maps/RrVNsrqmdG87dba79" target="_blank">View Location</a>
-							    </div>
-							
-							    <!-- MS -->
-							    <div class="education-card">
-							      <div class="edu-header">
-							        <img src="images/UMBC1.png" alt="UMBC" class="edu-logo">
-							        <div>
-							          <h3>M.S. in Computer Science</h3>
-							          <h4>University of Maryland, Baltimore County</h4>
-							          <p class="edu-duration">Aug 2021 – May 2025</p>
-							        </div>
-							      </div>
-							      <p>Specialized in Machine Learning, Computer Vision, and Data Science. Served as Graduate Research and Teaching Assistant.</p>
-							      <p><b>Thesis:</b> Vision-Language Multimodal Models in Clinical Applications</p>
-							      <a class="button primary" href="https://goo.gl/maps/RrVNsrqmdG87dba79" target="_blank">View Location</a>
-							    </div>
-							
-							    <!-- BTech -->
-							    <div class="education-card">
-							      <div class="edu-header">
-							        <img src="images/srm_logo.png" alt="SRM" class="edu-logo">
-							        <div>
-							          <h3>B.Tech in Computer Science</h3>
-							          <h4>SRM Institute of Science and Technology</h4>
-							          <p class="edu-duration">Jul 2015 – May 2019</p>
-							        </div>
-							      </div>
-							      <p>CGPA: 3.22/4.0. Relevant coursework in Machine Learning, Big Data, and Software Engineering.</p>
-							      <p><b>Project Highlight:</b> Credit Card Fraud Detection using Logistic Regression</p>
-							      <a class="button primary" href="https://goo.gl/maps/z7UVx4udmQoSYrZeA" target="_blank">View Location</a>
-							    </div>
-							
-							  </div>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form  action="https://formspree.io/f/mzbyjewq" method="POST">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/prakhardixit250697/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://www.facebook.com/prakhar.dixit.184/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/pdx972/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/pdx97" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Designed With ❤️<a href="https://github.com/pdx97">Prakhar Dixit</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
