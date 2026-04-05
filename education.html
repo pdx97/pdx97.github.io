@@ -38,21 +38,23 @@
 
       <div class="edu-track">
 
+        <!-- Step 01 — B.Tech (foundation) -->
         <div class="edu-step">
-          <div class="edu-step-dot"></div>
+          <div class="edu-step-num">01</div>
           <div class="edu-card">
-            <img src="images/UMBC1.png" alt="UMBC" class="edu-logo" />
+            <img src="images/SRMIST.png" alt="SRM Institute" class="edu-logo" />
             <div class="edu-info">
-              <h3>University of Maryland Baltimore County</h3>
-              <p class="degree">PhD in Computer Science &nbsp;·&nbsp; GPA: 3.589</p>
-              <p class="meta">Baltimore, Maryland &nbsp;·&nbsp; Aug 2023 – Present</p>
-              <p class="edu-note">Research: Working to understand why mathematical reasoning is so poor in LLMs.</p>
+              <h3>SRM Institute of Science and Technology</h3>
+              <p class="degree">B.Tech in Computer Science &amp; Engineering &nbsp;·&nbsp; GPA: 3.7</p>
+              <p class="meta">Chennai, India &nbsp;·&nbsp; Aug 2015 – May 2019</p>
+              <p class="edu-note">Final Year Project: Neural Sketching</p>
             </div>
           </div>
         </div>
 
+        <!-- Step 02 — MS -->
         <div class="edu-step">
-          <div class="edu-step-dot"></div>
+          <div class="edu-step-num">02</div>
           <div class="edu-card">
             <img src="images/UMBC1.png" alt="UMBC" class="edu-logo" />
             <div class="edu-info">
@@ -64,15 +66,16 @@
           </div>
         </div>
 
+        <!-- Step 03 — PhD (current) -->
         <div class="edu-step">
-          <div class="edu-step-dot"></div>
+          <div class="edu-step-num">03</div>
           <div class="edu-card">
-            <img src="images/SRMIST.png" alt="SRM Institute" class="edu-logo" />
+            <img src="images/UMBC1.png" alt="UMBC" class="edu-logo" />
             <div class="edu-info">
-              <h3>SRM Institute of Science and Technology</h3>
-              <p class="degree">B.Tech in Computer Science &amp; Engineering &nbsp;·&nbsp; GPA: 3.7</p>
-              <p class="meta">Chennai, India &nbsp;·&nbsp; Aug 2015 – May 2019</p>
-              <p class="edu-note">Final Year Project: Neural Sketching</p>
+              <h3>University of Maryland Baltimore County</h3>
+              <p class="degree">PhD in Computer Science &nbsp;·&nbsp; GPA: 3.589</p>
+              <p class="meta">Baltimore, Maryland &nbsp;·&nbsp; Aug 2023 – Present</p>
+              <p class="edu-note">Research: Working to understand why mathematical reasoning is so poor in LLMs.</p>
             </div>
           </div>
         </div>
@@ -162,20 +165,15 @@
   </div>
 
   <script>
-    // Animate education track line
-    const track = document.querySelector('.edu-track');
-    setTimeout(() => track.classList.add('tl-started'), 200);
-
-    // Animate each degree step
     const steps = document.querySelectorAll('.edu-step');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('tl-visible');
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
 
     steps.forEach((el, i) => {
-      el.style.transitionDelay = `${i * 80}ms`;
+      el.style.transitionDelay = `${i * 180}ms`;
       observer.observe(el);
     });
   </script>

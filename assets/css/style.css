@@ -482,68 +482,76 @@ nav {
 
 .timeline-item ul li strong { color: #cccccc; font-weight: 600; }
 
-/* ─── Education progression ──────────────────────────────────────────────── */
+/* ─── Education staircase ─────────────────────────────────────────────────── */
 .edu-track {
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: 2rem;
+  padding: 0.5rem 0 1rem 0;
 }
 
-.edu-track::before {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, #2dd4bf 0%, #1c1c1c 100%);
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.edu-track.tl-started::before { transform: scaleY(1); }
-
+/* Each step slides in from left, staggered by JS */
 .edu-step {
   position: relative;
-  margin-bottom: 1px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-28px);
+  transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1),
+              transform 0.55s cubic-bezier(0.4,0,0.2,1);
 }
 
-.edu-step.tl-visible { opacity: 1; transform: translateY(0); }
+/* Staircase indent — each degree one step to the right */
+.edu-step:nth-child(1) { margin-left: 0; }
+.edu-step:nth-child(2) { margin-left: 5rem; }
+.edu-step:nth-child(3) { margin-left: 10rem; }
 
-.edu-step-dot {
+.edu-step.tl-visible { opacity: 1; transform: translateX(0); }
+
+/* L-shaped connector between steps — goes down then right to next indent */
+.edu-step:not(:last-child)::after {
+  content: '';
   position: absolute;
-  left: -2rem;
-  top: 1.4rem;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #111111;
-  border: 1px solid #333333;
-  transition: border-color 0.3s ease, transform 0.3s ease;
-  z-index: 1;
+  bottom: -2rem;
+  left: 0;
+  width: 5rem;
+  height: 2rem;
+  border-left: 1px solid #2dd4bf44;
+  border-bottom: 1px solid #2dd4bf44;
+  border-radius: 0 0 0 8px;
 }
 
-.edu-step.tl-visible .edu-step-dot {
-  border-color: #2dd4bf;
-  transform: scale(1.25);
+/* Step number (01 / 02 / 03) */
+.edu-step-num {
+  flex-shrink: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222222;
+  line-height: 1;
+  width: 3rem;
+  padding-top: 1.1rem;
+  text-align: right;
+  letter-spacing: -0.04em;
+  transition: color 0.5s 0.2s;
+  user-select: none;
 }
+
+.edu-step.tl-visible .edu-step-num { color: #2dd4bf; }
 
 /* ─── Education cards ────────────────────────────────────────────────────── */
 .edu-card {
+  flex: 1;
   display: flex;
   gap: 1.25rem;
   padding: 1.4rem;
   border: 1px solid #242424;
   border-radius: 6px;
-  margin-bottom: 1px;
   align-items: flex-start;
   background: #1a1a1a;
+  transition: border-color 0.2s;
 }
+
+.edu-card:hover { border-color: #2dd4bf33; }
 
 .edu-logo {
   height: 56px;
@@ -920,6 +928,13 @@ footer a:hover { color: #2dd4bf; }
   .pub-item   { flex-direction: column; }
   .pub-logo   { width: 36px; height: 36px; }
   .honor-item { flex-direction: column; }
+
+  /* Collapse staircase on small screens */
+  .edu-step:nth-child(1),
+  .edu-step:nth-child(2),
+  .edu-step:nth-child(3) { margin-left: 0; }
+  .edu-step::after { display: none; }
+  .edu-step-num { font-size: 1.25rem; width: 2rem; padding-top: 1.3rem; }
 
   .nav-links { gap: 0.9rem; }
 }
