@@ -339,7 +339,6 @@ nav {
 /* ─── Timeline (Experience) — alternating ────────────────────────────────── */
 .timeline {
   position: relative;
-  padding: 0;
 }
 
 /* center vertical line */
@@ -349,99 +348,91 @@ nav {
   left: 50%;
   transform: translateX(-50%) scaleY(0);
   transform-origin: top center;
-  top: 0;
-  bottom: 0;
+  top: 0; bottom: 0;
   width: 1px;
   background: linear-gradient(to bottom, #ffffff 0%, #1c1c1c 100%);
   transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
 }
 
-.timeline.tl-started::before {
-  transform: translateX(-50%) scaleY(1);
-}
+.timeline.tl-started::before { transform: translateX(-50%) scaleY(1); }
 
-/* each item takes half the width */
+/* full-width row — padding shifts card left or right */
 .timeline-item {
   position: relative;
-  width: calc(50% - 2.5rem);
+  width: 100%;
+  display: flex;
   margin-bottom: 2.5rem;
-  opacity: 0;
-  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .timeline-item:last-child { margin-bottom: 0; }
 
-/* odd items → left side */
+/* odd → LEFT */
 .timeline-item:nth-child(odd) {
-  margin-left: 0;
-  transform: translateX(-30px);
+  padding-right: calc(50% + 2rem);
+  justify-content: flex-end;
 }
 
-/* even items → right side */
+/* even → RIGHT */
 .timeline-item:nth-child(even) {
-  margin-left: calc(50% + 2.5rem);
-  transform: translateX(30px);
+  padding-left: calc(50% + 2rem);
+  justify-content: flex-start;
 }
 
-.timeline-item.tl-visible {
-  opacity: 1;
-  transform: translateX(0) !important;
-}
-
-/* dot sits on the center line */
+/* dot pinned exactly on the center line */
 .timeline-dot {
   position: absolute;
-  top: 1rem;
+  left: calc(50% - 5px);
+  top: 1.1rem;
   width: 11px;
   height: 11px;
   border-radius: 50%;
   background: #000000;
   border: 1px solid #333333;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.35s ease, transform 0.35s ease;
   z-index: 1;
 }
 
-.timeline-item:nth-child(odd)  .timeline-dot { right: -2.9rem; }
-.timeline-item:nth-child(even) .timeline-dot { left: -2.9rem; }
-
 .timeline-item.tl-visible .timeline-dot {
   border-color: #ffffff;
-  transform: scale(1.3);
+  transform: scale(1.35);
 }
 
-/* content card inside each item */
+/* card — animates in from its side */
 .tl-card {
+  width: 100%;
   padding: 1.25rem;
   border: 1px solid #1c1c1c;
   border-radius: 6px;
   background: #0a0a0a;
-  transition: border-color 0.2s;
+  opacity: 0;
+  transition: border-color 0.2s,
+              opacity 0.55s cubic-bezier(0.4,0,0.2,1),
+              transform 0.55s cubic-bezier(0.4,0,0.2,1);
 }
 
+.timeline-item:nth-child(odd)  .tl-card { transform: translateX(-24px); }
+.timeline-item:nth-child(even) .tl-card { transform: translateX(24px); }
+
+.timeline-item.tl-visible .tl-card { opacity: 1; transform: translateX(0); }
 .tl-card:hover { border-color: #333333; }
 
-/* mobile: collapse to single column */
+/* mobile: single left-aligned column */
 @media (max-width: 700px) {
-  .timeline { padding-left: 2rem; }
-  .timeline::before { left: 5px; transform: scaleY(0) !important; }
-  .timeline.tl-started::before { transform: scaleY(1) !important; }
+  .timeline::before { left: 14px; }
 
   .timeline-item,
+  .timeline-item:nth-child(odd),
   .timeline-item:nth-child(even) {
-    width: 100%;
-    margin-left: 0;
-    transform: translateY(20px) !important;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    justify-content: flex-start;
   }
 
-  .timeline-item.tl-visible { transform: translateY(0) !important; }
+  .timeline-dot { left: 9px; }
 
-  .timeline-item:nth-child(odd)  .timeline-dot,
-  .timeline-item:nth-child(even) .timeline-dot {
-    left: -2rem;
-    right: auto;
-    top: 1rem;
-  }
+  .timeline-item:nth-child(odd)  .tl-card,
+  .timeline-item:nth-child(even) .tl-card { transform: translateX(16px); }
 }
 
 .timeline-item .org-logo {
