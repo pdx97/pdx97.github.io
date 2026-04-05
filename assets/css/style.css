@@ -6,7 +6,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: 'Inter', sans-serif;
   color: #ffffff;
-  background: #000000;
+  background: #111111;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -20,9 +20,9 @@ img { display: block; max-width: 100%; }
 nav {
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.96);
+  background: rgba(17, 17, 17, 0.96);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #1c1c1c;
+  border-bottom: 1px solid #242424;
   z-index: 100;
 }
 
@@ -60,7 +60,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #ffffff;
+  color: #2dd4bf;
 }
 
 /* ─── Page wrapper ───────────────────────────────────────────────────────── */
@@ -169,18 +169,18 @@ nav {
 }
 
 .btn-primary {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background: #2dd4bf;
+  color: #0a0a0a;
+  border-color: #2dd4bf;
 }
-.btn-primary:hover { background: #e0e0e0; border-color: #e0e0e0; text-decoration: none; }
+.btn-primary:hover { background: #22bfab; border-color: #22bfab; text-decoration: none; }
 
 .btn-outline {
   background: transparent;
   color: #ffffff;
   border-color: #444444;
 }
-.btn-outline:hover { border-color: #ffffff; text-decoration: none; }
+.btn-outline:hover { border-color: #2dd4bf; color: #2dd4bf; text-decoration: none; }
 
 .btn-ghost {
   background: transparent;
@@ -213,7 +213,7 @@ nav {
 
 .interest-card {
   padding: 1.5rem;
-  background: #0a0a0a;
+  background: #1a1a1a;
 }
 
 .interest-card .icon {
@@ -276,13 +276,13 @@ nav {
 
 .project-card {
   padding: 1.5rem;
-  background: #0a0a0a;
+  background: #1a1a1a;
   transition: background 0.15s;
   display: flex;
   flex-direction: column;
 }
 
-.project-card:hover { background: #0f0f0f; }
+.project-card:hover { background: #222222; }
 
 .project-card h3 {
   font-size: 0.9rem;
@@ -334,7 +334,7 @@ nav {
   transition: color 0.15s;
 }
 
-.project-links a:hover { color: #ffffff; text-decoration: none; }
+.project-links a:hover { color: #2dd4bf; text-decoration: none; }
 
 /* ─── Timeline (Experience) — alternating ────────────────────────────────── */
 .timeline {
@@ -350,7 +350,7 @@ nav {
   transform-origin: top center;
   top: 0; bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, #ffffff 0%, #1c1c1c 100%);
+  background: linear-gradient(to bottom, #2dd4bf 0%, #1c1c1c 100%);
   transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
 }
@@ -387,14 +387,14 @@ nav {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: #000000;
+  background: #111111;
   border: 1px solid #333333;
   transition: border-color 0.35s ease, transform 0.35s ease;
   z-index: 1;
 }
 
 .timeline-item.tl-visible .timeline-dot {
-  border-color: #ffffff;
+  border-color: #2dd4bf;
   transform: scale(1.35);
 }
 
@@ -402,9 +402,9 @@ nav {
 .tl-card {
   width: 100%;
   padding: 1.25rem;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #242424;
   border-radius: 6px;
-  background: #0a0a0a;
+  background: #1a1a1a;
   opacity: 0;
   transition: border-color 0.2s,
               opacity 0.55s cubic-bezier(0.4,0,0.2,1),
@@ -415,7 +415,7 @@ nav {
 .timeline-item:nth-child(even) .tl-card { transform: translateX(24px); }
 
 .timeline-item.tl-visible .tl-card { opacity: 1; transform: translateX(0); }
-.tl-card:hover { border-color: #333333; }
+.tl-card:hover { border-color: #2dd4bf33; }
 
 /* mobile: single left-aligned column */
 @media (max-width: 700px) {
@@ -496,7 +496,7 @@ nav {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, #ffffff 0%, #1c1c1c 100%);
+  background: linear-gradient(to bottom, #2dd4bf 0%, #1c1c1c 100%);
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -522,14 +522,14 @@ nav {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: #000000;
+  background: #111111;
   border: 1px solid #333333;
   transition: border-color 0.3s ease, transform 0.3s ease;
   z-index: 1;
 }
 
 .edu-step.tl-visible .edu-step-dot {
-  border-color: #ffffff;
+  border-color: #2dd4bf;
   transform: scale(1.25);
 }
 
@@ -538,11 +538,11 @@ nav {
   display: flex;
   gap: 1.25rem;
   padding: 1.4rem;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #242424;
   border-radius: 6px;
   margin-bottom: 1px;
   align-items: flex-start;
-  background: #0a0a0a;
+  background: #1a1a1a;
 }
 
 .edu-logo {
@@ -635,9 +635,9 @@ nav {
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 6px;
-  background: #111111;
+  background: #1a1a1a;
   padding: 10px;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #242424;
 }
 
 .pub-body { flex: 1; }
@@ -663,8 +663,8 @@ nav {
 }
 
 .pub-venue-highlight {
-  color: #cccccc;
-  border-color: #444444;
+  color: #2dd4bf;
+  border-color: #2dd4bf44;
 }
 
 .pub-year {
@@ -709,7 +709,7 @@ nav {
   transition: color 0.15s;
 }
 
-.pub-link:hover { color: #ffffff; text-decoration: none; }
+.pub-link:hover { color: #2dd4bf; text-decoration: none; }
 
 /* ─── Peer review list ───────────────────────────────────────────────────── */
 .review-list {
@@ -727,7 +727,7 @@ nav {
   line-height: 1.5;
 }
 
-.review-icon { color: #555555; font-size: 0.75rem; flex-shrink: 0; }
+.review-icon { color: #2dd4bf; font-size: 0.75rem; flex-shrink: 0; }
 .review-item strong { color: #cccccc; }
 
 /* ─── Honors / Talks / Awards ────────────────────────────────────────────── */
@@ -750,8 +750,8 @@ nav {
   width: 38px;
   height: 38px;
   border-radius: 4px;
-  background: #0a0a0a;
-  border: 1px solid #1c1c1c;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -846,8 +846,8 @@ nav {
   transition: color 0.15s;
 }
 
-.social-link:hover { color: #ffffff; text-decoration: none; }
-.social-link i { width: 16px; color: #333333; }
+.social-link:hover { color: #2dd4bf; text-decoration: none; }
+.social-link i { width: 16px; color: #444444; }
 
 /* Contact Form */
 .contact-form .field { margin-bottom: 1rem; }
@@ -866,18 +866,18 @@ nav {
 .contact-form textarea {
   width: 100%;
   padding: 0.65rem 0.9rem;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #242424;
   border-radius: 4px;
   font-size: 0.875rem;
   font-family: inherit;
   color: #ffffff;
-  background: #0a0a0a;
+  background: #1a1a1a;
   transition: border-color 0.15s;
   outline: none;
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus { border-color: #555555; }
+.contact-form textarea:focus { border-color: #2dd4bf; }
 
 .contact-form textarea { resize: vertical; min-height: 130px; }
 
@@ -895,9 +895,9 @@ footer {
   text-align: center;
 }
 
-footer p { font-size: 0.8rem; color: #2a2a2a; }
-footer a { color: #333333; text-decoration: none; transition: color 0.15s; }
-footer a:hover { color: #ffffff; }
+footer p { font-size: 0.8rem; color: #444444; }
+footer a { color: #555555; text-decoration: none; transition: color 0.15s; }
+footer a:hover { color: #2dd4bf; }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
