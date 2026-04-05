@@ -36,51 +36,54 @@
     <div class="section">
       <p class="section-title">Degrees</p>
 
-      <div class="edu-track">
+      <!-- Staircase: steps grow taller left→right (B.Tech→MS→PhD) -->
+      <div class="staircase">
 
-        <!-- Step 01 — B.Tech (foundation) -->
-        <div class="edu-step">
-          <div class="edu-step-num">01</div>
-          <div class="edu-card">
-            <img src="images/SRMIST.png" alt="SRM Institute" class="edu-logo" />
-            <div class="edu-info">
-              <h3>SRM Institute of Science and Technology</h3>
-              <p class="degree">B.Tech in Computer Science &amp; Engineering &nbsp;·&nbsp; GPA: 3.7</p>
-              <p class="meta">Chennai, India &nbsp;·&nbsp; Aug 2015 – May 2019</p>
-              <p class="edu-note">Final Year Project: Neural Sketching</p>
-            </div>
+        <!-- Step 1: B.Tech -->
+        <div class="stair">
+          <div class="stair-top">
+            <span class="stair-num">01</span>
+            <img src="images/SRMIST.png" alt="SRM" class="stair-logo" />
           </div>
+          <h3 class="stair-school">SRM Institute of Science and Technology</h3>
+          <p class="stair-degree">B.Tech · CS &amp; Engineering</p>
+          <p class="stair-gpa">GPA 3.7</p>
+          <p class="stair-dates">Chennai &nbsp;·&nbsp; 2015 – 2019</p>
+          <p class="stair-note">Final Year Project: Neural Sketching</p>
+          <div class="stair-riser"></div>
         </div>
 
-        <!-- Step 02 — MS -->
-        <div class="edu-step">
-          <div class="edu-step-num">02</div>
-          <div class="edu-card">
-            <img src="images/UMBC1.png" alt="UMBC" class="edu-logo" />
-            <div class="edu-info">
-              <h3>University of Maryland Baltimore County</h3>
-              <p class="degree">MS in Computer Science &nbsp;·&nbsp; GPA: 3.5</p>
-              <p class="meta">Baltimore, Maryland &nbsp;·&nbsp; Aug 2021 – May 2023</p>
-              <p class="edu-note">Thesis: Dynamic Edge Weighting in Relational Graph Convolutional Networks: Enhancing Sample Efficiency via Graph Attention in Reinforcement Learning</p>
-            </div>
+        <!-- Step 2: MS -->
+        <div class="stair">
+          <div class="stair-top">
+            <span class="stair-num">02</span>
+            <img src="images/UMBC1.png" alt="UMBC" class="stair-logo" />
           </div>
+          <h3 class="stair-school">University of Maryland Baltimore County</h3>
+          <p class="stair-degree">MS · Computer Science</p>
+          <p class="stair-gpa">GPA 3.5</p>
+          <p class="stair-dates">Baltimore, MD &nbsp;·&nbsp; 2021 – 2023</p>
+          <p class="stair-note">Thesis: Dynamic Edge Weighting in R-GCN for Sample Efficiency in RL</p>
+          <div class="stair-riser"></div>
         </div>
 
-        <!-- Step 03 — PhD (current) -->
-        <div class="edu-step">
-          <div class="edu-step-num">03</div>
-          <div class="edu-card">
-            <img src="images/UMBC1.png" alt="UMBC" class="edu-logo" />
-            <div class="edu-info">
-              <h3>University of Maryland Baltimore County</h3>
-              <p class="degree">PhD in Computer Science &nbsp;·&nbsp; GPA: 3.589</p>
-              <p class="meta">Baltimore, Maryland &nbsp;·&nbsp; Aug 2023 – Present</p>
-              <p class="edu-note">Research: Working to understand why mathematical reasoning is so poor in LLMs.</p>
-            </div>
+        <!-- Step 3: PhD -->
+        <div class="stair stair-current">
+          <div class="stair-top">
+            <span class="stair-num">03</span>
+            <img src="images/UMBC1.png" alt="UMBC" class="stair-logo" />
+            <span class="stair-badge">Current</span>
           </div>
+          <h3 class="stair-school">University of Maryland Baltimore County</h3>
+          <p class="stair-degree">PhD · Computer Science</p>
+          <p class="stair-gpa">GPA 3.589</p>
+          <p class="stair-dates">Baltimore, MD &nbsp;·&nbsp; 2023 – Present</p>
+          <p class="stair-note">Research: LLM mathematical reasoning and improving sample efficiency in RL.</p>
+          <div class="stair-riser"></div>
         </div>
 
       </div>
+      <div class="staircase-base"></div>
     </div>
 
     <hr class="divider" />
@@ -165,14 +168,19 @@
   </div>
 
   <script>
-    const steps = document.querySelectorAll('.edu-step');
+    const stairs = document.querySelectorAll('.stair');
+    const base   = document.querySelector('.staircase-base');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('tl-visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('stair-visible');
+          if (base) setTimeout(() => base.classList.add('base-visible'), 600);
+        }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    steps.forEach((el, i) => {
+    stairs.forEach((el, i) => {
       el.style.transitionDelay = `${i * 180}ms`;
       observer.observe(el);
     });
