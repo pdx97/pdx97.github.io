@@ -630,13 +630,13 @@ nav {
 .pub-item:last-child { border-bottom: none; }
 
 .pub-logo {
-  width: 64px;
-  height: 64px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 4px;
+  border-radius: 6px;
   background: #111111;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #1c1c1c;
 }
 
