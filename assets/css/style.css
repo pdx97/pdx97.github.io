@@ -53,14 +53,46 @@ nav {
 .nav-links a {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #555555;
+  color: #aaaaaa;
   text-decoration: none;
-  transition: color 0.15s;
+  transition: color 0.2s, background 0.2s;
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+  position: relative;
 }
 
-.nav-links a:hover,
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: #2dd4bf;
+  border-radius: 2px;
+  transition: left 0.2s ease, right 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background: rgba(45, 212, 191, 0.08);
+  text-decoration: none;
+}
+
+.nav-links a:hover::after {
+  left: 0.55rem;
+  right: 0.55rem;
+}
+
+.nav-links a.active::after {
+  left: 0.55rem;
+  right: 0.55rem;
+  background: #4f8ef7;
+}
+
 .nav-links a.active {
-  color: #2dd4bf;
+  color: #4f8ef7;
+  background: rgba(79, 142, 247, 0.08);
 }
 
 /* ─── Page wrapper ───────────────────────────────────────────────────────── */
@@ -86,7 +118,7 @@ nav {
 
 .page-header p {
   margin-top: 0.4rem;
-  color: #555555;
+  color: #aaaaaa;
   font-size: 0.95rem;
 }
 
@@ -113,13 +145,13 @@ nav {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: 400;
-  color: #888888;
+  color: #cccccc;
 }
 
 .hero-bio {
   margin-top: 1rem;
   font-size: 0.95rem;
-  color: #888888;
+  color: #cccccc;
   max-width: 500px;
   line-height: 1.75;
 }
@@ -197,7 +229,7 @@ nav {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #444444;
+  color: #999999;
   margin-bottom: 1.25rem;
 }
 
@@ -230,7 +262,7 @@ nav {
 
 .interest-card p {
   font-size: 0.82rem;
-  color: #555555;
+  color: #bbbbbb;
   line-height: 1.6;
 }
 
@@ -256,12 +288,12 @@ nav {
   flex-shrink: 0;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #555555;
+  color: #aaaaaa;
   width: 72px;
   font-variant-numeric: tabular-nums;
 }
 
-.news-text { color: #888888; line-height: 1.6; }
+.news-text { color: #cccccc; line-height: 1.6; }
 .news-text strong { color: #ffffff; font-weight: 600; }
 
 /* ─── Project cards ──────────────────────────────────────────────────────── */
@@ -293,13 +325,13 @@ nav {
 
 .project-card p {
   font-size: 0.845rem;
-  color: #666666;
+  color: #cccccc;
   line-height: 1.65;
   flex: 1;
   margin-bottom: 1rem;
 }
 
-.project-card p strong { color: #cccccc; }
+.project-card p strong { color: #ffffff; }
 
 .tags {
   display: flex;
@@ -310,12 +342,12 @@ nav {
 
 .tag {
   background: transparent;
-  color: #555555;
+  color: #999999;
   font-size: 0.72rem;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
   font-weight: 500;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #333333;
 }
 
 .project-links {
@@ -326,7 +358,7 @@ nav {
 .project-links a {
   font-size: 0.82rem;
   font-weight: 500;
-  color: #888888;
+  color: #aaaaaa;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -453,7 +485,7 @@ nav {
 
 .timeline-item .meta {
   font-size: 0.8rem;
-  color: #444444;
+  color: #999999;
   margin: 0.3rem 0 0.75rem;
 }
 
@@ -466,7 +498,7 @@ nav {
 
 .timeline-item ul li {
   font-size: 0.875rem;
-  color: #666666;
+  color: #cccccc;
   margin-bottom: 0.4rem;
   line-height: 1.65;
   padding-left: 1rem;
@@ -477,10 +509,10 @@ nav {
   content: '–';
   position: absolute;
   left: 0;
-  color: #333333;
+  color: #666666;
 }
 
-.timeline-item ul li strong { color: #cccccc; font-weight: 600; }
+.timeline-item ul li strong { color: #ffffff; font-weight: 600; }
 
 /* ─── Education staircase ─────────────────────────────────────────────────── */
 .staircase {
@@ -581,7 +613,7 @@ nav {
 
 .stair-degree {
   font-size: 0.78rem;
-  color: #888888;
+  color: #cccccc;
   margin-bottom: 0.15rem;
 }
 
@@ -594,13 +626,13 @@ nav {
 
 .stair-dates {
   font-size: 0.72rem;
-  color: #555555;
+  color: #aaaaaa;
   margin-bottom: 0.5rem;
 }
 
 .stair-note {
   font-size: 0.72rem;
-  color: #444444;
+  color: #999999;
   font-style: italic;
   line-height: 1.5;
   margin-bottom: 0.5rem;
@@ -616,7 +648,7 @@ nav {
 .skill-group h3 {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #444444;
+  color: #999999;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.75rem;
@@ -630,12 +662,12 @@ nav {
 
 .skill-tag {
   background: transparent;
-  color: #888888;
+  color: #cccccc;
   font-size: 0.82rem;
   padding: 0.3rem 0.75rem;
   border-radius: 3px;
   font-weight: 400;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #333333;
 }
 
 /* ─── Publication cards ──────────────────────────────────────────────────── */
@@ -679,11 +711,11 @@ nav {
 .pub-venue {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #555555;
+  color: #aaaaaa;
   background: transparent;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
-  border: 1px solid #222222;
+  border: 1px solid #333333;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -695,7 +727,7 @@ nav {
 
 .pub-year {
   font-size: 0.75rem;
-  color: #444444;
+  color: #999999;
   margin-left: auto;
 }
 
@@ -709,25 +741,25 @@ nav {
 
 .pub-authors {
   font-size: 0.82rem;
-  color: #444444;
+  color: #aaaaaa;
   margin-bottom: 0.5rem;
 }
 
 .pub-abstract {
   font-size: 0.845rem;
-  color: #666666;
+  color: #cccccc;
   line-height: 1.65;
   margin-bottom: 0.75rem;
 }
 
-.pub-abstract strong { color: #cccccc; }
+.pub-abstract strong { color: #ffffff; }
 
 .pub-links { display: flex; gap: 1rem; }
 
 .pub-link {
   font-size: 0.82rem;
   font-weight: 500;
-  color: #888888;
+  color: #aaaaaa;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -749,12 +781,12 @@ nav {
   align-items: baseline;
   gap: 0.75rem;
   font-size: 0.875rem;
-  color: #666666;
+  color: #cccccc;
   line-height: 1.5;
 }
 
 .review-icon { color: #2dd4bf; font-size: 0.75rem; flex-shrink: 0; }
-.review-item strong { color: #cccccc; }
+.review-item strong { color: #ffffff; }
 
 /* ─── Honors / Talks / Awards ────────────────────────────────────────────── */
 .honor-list {
@@ -788,7 +820,7 @@ nav {
 .honor-icon-wrap.honor-gold  { border-color: #333333; }
 .honor-icon-wrap.honor-bronze { border-color: #2a2a2a; }
 
-.honor-icon { font-size: 0.95rem; color: #555555; }
+.honor-icon { font-size: 0.95rem; color: #999999; }
 
 .honor-icon-wrap.honor-gold .honor-icon  { color: #aaaaaa; }
 .honor-icon-wrap.honor-bronze .honor-icon { color: #888888; }
@@ -806,14 +838,14 @@ nav {
 .honor-org {
   font-size: 0.72rem;
   font-weight: 600;
-  color: #444444;
+  color: #999999;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .honor-date {
   font-size: 0.72rem;
-  color: #333333;
+  color: #888888;
   margin-left: auto;
 }
 
@@ -827,12 +859,12 @@ nav {
 
 .honor-desc {
   font-size: 0.845rem;
-  color: #666666;
+  color: #cccccc;
   line-height: 1.65;
 }
 
-.honor-desc strong { color: #aaaaaa; }
-.honor-desc em { font-style: italic; color: #555555; }
+.honor-desc strong { color: #ffffff; }
+.honor-desc em { font-style: italic; color: #aaaaaa; }
 
 /* ─── Contact ────────────────────────────────────────────────────────────── */
 .contact-grid {
@@ -851,7 +883,7 @@ nav {
 
 .contact-info p {
   font-size: 0.875rem;
-  color: #555555;
+  color: #aaaaaa;
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
@@ -867,13 +899,13 @@ nav {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.875rem;
-  color: #666666;
+  color: #cccccc;
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .social-link:hover { color: #2dd4bf; text-decoration: none; }
-.social-link i { width: 16px; color: #444444; }
+.social-link i { width: 16px; color: #aaaaaa; }
 
 /* Contact Form */
 .contact-form .field { margin-bottom: 1rem; }
@@ -882,7 +914,7 @@ nav {
   display: block;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #555555;
+  color: #aaaaaa;
   margin-bottom: 0.35rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -921,8 +953,8 @@ footer {
   text-align: center;
 }
 
-footer p { font-size: 0.8rem; color: #444444; }
-footer a { color: #555555; text-decoration: none; transition: color 0.15s; }
+footer p { font-size: 0.8rem; color: #999999; }
+footer a { color: #aaaaaa; text-decoration: none; transition: color 0.15s; }
 footer a:hover { color: #2dd4bf; }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
