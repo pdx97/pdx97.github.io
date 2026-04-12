@@ -25,6 +25,7 @@
         <li><a href="education.html">Education</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -185,5 +186,19 @@
     </p>
   </footer>
 
+  <script>
+    var navToggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('nav');
+    navToggle.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        nav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -957,8 +957,71 @@ footer p { font-size: 0.8rem; color: #999999; }
 footer a { color: #aaaaaa; text-decoration: none; transition: color 0.15s; }
 footer a:hover { color: #2dd4bf; }
 
+/* ─── Hamburger toggle button (hidden on desktop) ────────────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: #aaaaaa;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+/* Animate to × when open */
+nav.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0; right: 0;
+    background: rgba(17, 17, 17, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #242424;
+    flex-direction: column;
+    padding: 0.75rem 1.5rem 1rem;
+    gap: 0;
+    z-index: 99;
+  }
+
+  nav.nav-open .nav-links { display: flex; }
+
+  .nav-links li { width: 100%; }
+
+  .nav-links a {
+    display: block;
+    padding: 0.65rem 0;
+    font-size: 0.9rem;
+    border-radius: 0;
+    border-bottom: 1px solid #1c1c1c;
+    background: transparent !important;
+  }
+
+  .nav-links li:last-child a { border-bottom: none; }
+
+  /* No sliding underline needed in list view */
+  .nav-links a::after { display: none; }
+
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
@@ -984,12 +1047,8 @@ footer a:hover { color: #2dd4bf; }
   .stair { border-radius: 6px; border-bottom: 1px solid #242424; border-top: 2px solid #2dd4bf; padding-bottom: 1.25rem; }
   .stair-riser { display: none; }
   .staircase-base { display: none; }
-
-  .nav-links { gap: 0.9rem; }
 }
 
 @media (max-width: 480px) {
   .hero-name { font-size: 2rem; }
-  .nav-links { gap: 0.6rem; }
-  .nav-links a { font-size: 0.78rem; }
 }
