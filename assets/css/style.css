@@ -87,12 +87,12 @@ nav {
 .nav-links a.active::after {
   left: 0.55rem;
   right: 0.55rem;
-  background: #4f8ef7;
+  background: #2dd4bf;
 }
 
 .nav-links a.active {
-  color: #4f8ef7;
-  background: rgba(79, 142, 247, 0.08);
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.08);
 }
 
 /* ─── Page wrapper ───────────────────────────────────────────────────────── */
