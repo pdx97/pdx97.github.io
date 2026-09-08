@@ -1,215 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Education · Prakhar Dixit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-</head>
-<body>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand">Prakhar Dixit</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="education.html" class="active">Education</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Education · Prakhar Dixit
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="assets/css/fontawesome-all.min.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="Academic background and technical skills of Prakhar Dixit." name="description"/>
+  <link href="https://pdx97.github.io/education.html" rel="canonical"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <nav aria-label="Main navigation">
+   <div class="nav-inner">
+    <a class="nav-brand" href="index.html">
+     Prakhar Dixit
+    </a>
+    <ul class="nav-links" id="primary-navigation">
+     <li>
+      <a href="index.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="publications.html">
+       Publications
+      </a>
+     </li>
+     <li>
+      <a href="experience.html">
+       Experience
+      </a>
+     </li>
+     <li>
+      <a href="projects.html">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a href="honors.html">
+       Honors
+      </a>
+     </li>
+     <li>
+      <a aria-current="page" class="active" href="education.html">
+       Education
+      </a>
+     </li>
+     <li>
+      <a href="contact.html">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
   </nav>
-
-  <div class="page">
+  <main id="main-content" tabindex="-1">
+   <div class="page">
     <div class="page-header">
-      <h1>Education</h1>
-      <p>Academic background and technical skills.</p>
+     <h1>
+      Education
+     </h1>
+     <p>
+      Academic background and technical skills.
+     </p>
     </div>
-
     <!-- Degrees -->
     <div class="section">
-      <p class="section-title">Degrees</p>
-
-      <!-- Staircase: steps grow taller left→right (B.Tech→MS→PhD) -->
-      <div class="staircase">
-
-        <!-- Step 1: B.Tech -->
-        <div class="stair">
-          <div class="stair-top">
-            <span class="stair-num">01</span>
-            <img src="images/SRMIST.png" alt="SRM" class="stair-logo" />
-          </div>
-          <h3 class="stair-school">SRM Institute of Science and Technology</h3>
-          <p class="stair-degree">B.Tech · CS &amp; Engineering</p>
-          <p class="stair-gpa">GPA 3.7</p>
-          <p class="stair-dates">Chennai &nbsp;·&nbsp; 2015 – 2019</p>
-          <p class="stair-note">Final Year Project: Neural Sketching</p>
-          <div class="stair-riser"></div>
-        </div>
-
-        <!-- Step 2: MS -->
-        <div class="stair">
-          <div class="stair-top">
-            <span class="stair-num">02</span>
-            <img src="images/UMBC1.png" alt="UMBC" class="stair-logo" />
-          </div>
-          <h3 class="stair-school">University of Maryland Baltimore County</h3>
-          <p class="stair-degree">MS · Computer Science</p>
-          <p class="stair-gpa">GPA 3.5</p>
-          <p class="stair-dates">Baltimore, MD &nbsp;·&nbsp; 2021 – 2023</p>
-          <p class="stair-note">Thesis: Dynamic Edge Weighting in R-GCN for Sample Efficiency in RL</p>
-          <div class="stair-riser"></div>
-        </div>
-
-        <!-- Step 3: PhD -->
-        <div class="stair stair-current">
-          <div class="stair-top">
-            <span class="stair-num">03</span>
-            <img src="images/UMBC1.png" alt="UMBC" class="stair-logo" />
-            <span class="stair-badge">Current</span>
-          </div>
-          <h3 class="stair-school">University of Maryland Baltimore County</h3>
-          <p class="stair-degree">PhD · Computer Science</p>
-          <p class="stair-gpa">GPA 3.589</p>
-          <p class="stair-dates">Baltimore, MD &nbsp;·&nbsp; 2023 – Present</p>
-          <p class="stair-note">Research: LLM mathematical reasoning and improving sample efficiency in RL.</p>
-          <div class="stair-riser"></div>
-        </div>
-
+     <h2 class="section-title">
+      Degrees
+     </h2>
+     <!-- Staircase: steps grow taller left→right (B.Tech→MS→PhD) -->
+     <div class="staircase">
+      <!-- Step 1: B.Tech -->
+      <div class="stair">
+       <div class="stair-top">
+        <span class="stair-num">
+         01
+        </span>
+        <img alt="SRM" class="stair-logo" loading="lazy" src="images/SRMIST.png"/>
+       </div>
+       <h3 class="stair-school">
+        SRM Institute of Science and Technology
+       </h3>
+       <p class="stair-degree">
+        B.Tech · CS &amp; Engineering
+       </p>
+       <p class="stair-gpa">
+        GPA 3.7
+       </p>
+       <p class="stair-dates">
+        Chennai  ·  2015 – 2019
+       </p>
+       <p class="stair-note">
+        Final Year Project: Neural Sketching
+       </p>
+       <div class="stair-riser">
+       </div>
       </div>
-      <div class="staircase-base"></div>
+      <!-- Step 2: MS -->
+      <div class="stair">
+       <div class="stair-top">
+        <span class="stair-num">
+         02
+        </span>
+        <img alt="UMBC" class="stair-logo" loading="lazy" src="images/UMBC1.png"/>
+       </div>
+       <h3 class="stair-school">
+        University of Maryland Baltimore County
+       </h3>
+       <p class="stair-degree">
+        MS · Computer Science
+       </p>
+       <p class="stair-gpa">
+        GPA 3.5
+       </p>
+       <p class="stair-dates">
+        Baltimore, MD  ·  2021 – 2023
+       </p>
+       <p class="stair-note">
+        Thesis: Dynamic Edge Weighting in R-GCN for Sample Efficiency in RL
+       </p>
+       <div class="stair-riser">
+       </div>
+      </div>
+      <!-- Step 3: PhD -->
+      <div class="stair stair-current">
+       <div class="stair-top">
+        <span class="stair-num">
+         03
+        </span>
+        <img alt="UMBC" class="stair-logo" loading="lazy" src="images/UMBC1.png"/>
+        <span class="stair-badge">
+         Current
+        </span>
+       </div>
+       <h3 class="stair-school">
+        University of Maryland Baltimore County
+       </h3>
+       <p class="stair-degree">
+        PhD · Computer Science
+       </p>
+       <p class="stair-gpa">
+        GPA 3.589
+       </p>
+       <p class="stair-dates">
+        Baltimore, MD  ·  2023 – Present
+       </p>
+       <p class="stair-note">
+        Research: LLM mathematical reasoning and improving sample efficiency in RL.
+        <!-- BEGIN ISM education -->
+<a href="publications.html#ism">Related work: ISM</a>.
+<!-- END ISM education -->
+       </p>
+       <div class="stair-riser">
+       </div>
+      </div>
+     </div>
+     <div class="staircase-base">
+     </div>
     </div>
-
-    <hr class="divider" />
-
+    <hr class="divider"/>
     <!-- Skills -->
     <div class="section">
-      <p class="section-title">Technical Skills</p>
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <h3>Programming</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">JavaScript</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Machine Learning &amp; AI</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Deep RL</span>
-            <span class="skill-tag">LLMs</span>
-            <span class="skill-tag">RAG</span>
-            <span class="skill-tag">Agentic AI</span>
-            <span class="skill-tag">CNN / ANN</span>
-            <span class="skill-tag">YOLO</span>
-            <span class="skill-tag">Sim2Real</span>
-            <span class="skill-tag">Scikit-learn</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Frameworks &amp; Tools</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">MERN Stack</span>
-            <span class="skill-tag">Android Studio</span>
-            <span class="skill-tag">Gradle</span>
-            <span class="skill-tag">Git</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Databases</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Oracle DB</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">MongoDB</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Research Areas</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Math Reasoning in LLMs</span>
-            <span class="skill-tag">Sample Efficiency in RL</span>
-            <span class="skill-tag">Human Feedback (RLHF)</span>
-            <span class="skill-tag">Big Data</span>
-          </div>
-        </div>
-
+     <h2 class="section-title">
+      Technical Skills
+     </h2>
+     <div class="skills-grid">
+      <div class="skill-group">
+       <h3>
+        Programming
+       </h3>
+       <div class="skill-tags">
+        <span class="skill-tag">
+         Python
+        </span>
+        <span class="skill-tag">
+         Java
+        </span>
+        <span class="skill-tag">
+         C++
+        </span>
+        <span class="skill-tag">
+         SQL
+        </span>
+        <span class="skill-tag">
+         JavaScript
+        </span>
+       </div>
       </div>
+      <div class="skill-group">
+       <h3>
+        Machine Learning &amp; AI
+       </h3>
+       <div class="skill-tags">
+        <span class="skill-tag">
+         Deep RL
+        </span>
+        <span class="skill-tag">
+         LLMs
+        </span>
+        <span class="skill-tag">
+         RAG
+        </span>
+        <span class="skill-tag">
+         Agentic AI
+        </span>
+        <span class="skill-tag">
+         CNN / ANN
+        </span>
+        <span class="skill-tag">
+         YOLO
+        </span>
+        <span class="skill-tag">
+         Sim2Real
+        </span>
+        <span class="skill-tag">
+         Scikit-learn
+        </span>
+       </div>
+      </div>
+      <div class="skill-group">
+       <h3>
+        Frameworks &amp; Tools
+       </h3>
+       <div class="skill-tags">
+        <span class="skill-tag">
+         Spring Boot
+        </span>
+        <span class="skill-tag">
+         REST APIs
+        </span>
+        <span class="skill-tag">
+         MERN Stack
+        </span>
+        <span class="skill-tag">
+         Android Studio
+        </span>
+        <span class="skill-tag">
+         Gradle
+        </span>
+        <span class="skill-tag">
+         Git
+        </span>
+       </div>
+      </div>
+      <div class="skill-group">
+       <h3>
+        Databases
+       </h3>
+       <div class="skill-tags">
+        <span class="skill-tag">
+         Oracle DB
+        </span>
+        <span class="skill-tag">
+         MySQL
+        </span>
+        <span class="skill-tag">
+         MongoDB
+        </span>
+       </div>
+      </div>
+      <div class="skill-group">
+       <h3>
+        Research Areas
+       </h3>
+       <div class="skill-tags">
+        <span class="skill-tag">
+         Math Reasoning in LLMs
+        </span>
+        <span class="skill-tag">
+         Sample Efficiency in RL
+        </span>
+        <span class="skill-tag">
+         Human Feedback (RLHF)
+        </span>
+        <span class="skill-tag">
+         Big Data
+        </span>
+       </div>
+      </div>
+     </div>
     </div>
-
-    <hr class="divider" />
-
+    <hr class="divider"/>
     <!-- CV -->
     <div class="section">
-      <p class="section-title">Curriculum Vitae</p>
-      <p style="font-size:0.9rem; color:#94a3b8; margin-bottom:1rem;">
-        Download my full CV for a complete list of experience, publications, and projects.
-      </p>
-      <a href="Docs/resume_prakhar_dixit_April2026.pdf" download class="btn btn-primary">
-        <i class="fa fa-download"></i> Download CV (PDF)
-      </a>
+     <h2 class="section-title">
+      Curriculum Vitae
+     </h2>
+     <p>
+      Download my full CV for a complete list of experience, publications, and projects.
+     </p>
+     <a class="btn btn-primary" download="" href="Docs/Prakhar_Dixit_CV.pdf">
+      <i aria-hidden="true" class="fa fa-download">
+      </i>
+      Download CV (PDF)
+     </a>
     </div>
-
-  </div>
-
-  <script>
-    const stairs = document.querySelectorAll('.stair');
-    const base   = document.querySelector('.staircase-base');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('stair-visible');
-          if (base) setTimeout(() => base.classList.add('base-visible'), 600);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    stairs.forEach((el, i) => {
-      el.style.transitionDelay = `${i * 180}ms`;
-      observer.observe(el);
-    });
-  </script>
-
+   </div>
+  </main>
   <footer>
-    <p>
-      © 2026 Prakhar Dixit &nbsp;·&nbsp;
-      <a href="https://github.com/pdx97" target="_blank"><i class="fab fa-github"></i> pdx97</a> &nbsp;·&nbsp;
-      <a href="https://www.linkedin.com/in/prakhardixit250697/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp;·&nbsp;
-      <a href="mailto:prakhhar1997@gmail.com"><i class="fa fa-envelope"></i> Email</a>
-    </p>
+   <p>
+    © 2026 Prakhar Dixit  ·
+    <a href="https://github.com/pdx97" rel="noopener noreferrer" target="_blank">
+     <i aria-hidden="true" class="fab fa-github">
+     </i>
+     pdx97
+    </a>
+    ·
+    <a href="https://www.linkedin.com/in/prakhardixit250697/" rel="noopener noreferrer" target="_blank">
+     <i aria-hidden="true" class="fab fa-linkedin">
+     </i>
+     LinkedIn
+    </a>
+    ·
+    <a href="mailto:prakhhar1997@gmail.com">
+     <i aria-hidden="true" class="fa fa-envelope">
+     </i>
+     Email
+    </a>
+   </p>
   </footer>
-
-  <script>
-    var navToggle = document.querySelector('.nav-toggle');
-    var nav = document.querySelector('nav');
-    navToggle.addEventListener('click', function() {
-      var open = nav.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', open);
-    });
-    document.querySelectorAll('.nav-links a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        nav.classList.remove('nav-open');
-        navToggle.setAttribute('aria-expanded', false);
-      });
-    });
+  <script defer="True" src="assets/js/site.js">
   </script>
-</body>
+ </body>
 </html>
