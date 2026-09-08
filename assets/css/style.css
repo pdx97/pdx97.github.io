@@ -472,32 +472,69 @@ nav {
   color:var(--accent);
   margin-top:.4rem;
 }
+/* Alternating experience timeline: left, right, left along a central spine. */
 .timeline {
-  border-left:1px solid var(--line);
-  margin-left:.5rem;
+  position:relative;
+  margin:0;
+  border:0;
+}
+.timeline::before {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(to bottom, var(--accent), var(--line));
 }
 .timeline-item {
   position:relative;
-  padding:0 0 2rem 2.5rem;
+  display:flex;
+  width:100%;
+  padding:0 0 2.5rem;
+}
+.timeline-item:nth-child(odd) {
+  padding-right:calc(50% + 2rem);
+}
+.timeline-item:nth-child(even) {
+  padding-left:calc(50% + 2rem);
 }
 .timeline-item:last-child {
   padding-bottom:0;
 }
+.timeline-item::before {
+  content:"";
+  position:absolute;
+  top:2rem;
+  width:2rem;
+  height:1px;
+  background:var(--line);
+}
+.timeline-item:nth-child(odd)::before {
+  right:50%;
+}
+.timeline-item:nth-child(even)::before {
+  left:50%;
+}
 .timeline-dot {
   position:absolute;
-  left:-5px;
-  top:2rem;
-  width:9px;
-  height:9px;
+  left:calc(50% - 5px);
+  top:calc(2rem - 5px);
+  width:11px;
+  height:11px;
   border:1px solid var(--accent);
   border-radius:50%;
   background:var(--bg);
+  z-index:1;
 }
 .tl-card {
+  width:100%;
+  min-width:0;
   background:var(--surface);
   border:1px solid var(--line);
   border-radius:6px;
-  padding:2rem;
+  padding:1.5rem;
   opacity:1;
 }
 .org-logo {
@@ -811,8 +848,22 @@ footer a {
     grid-template-columns:1fr;
     gap:.25rem;
   }
-  .timeline-item {
-    padding-left:1.5rem;
+  .timeline::before {
+    left:5px;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left:2rem;
+    padding-right:0;
+  }
+  .timeline-dot {
+    left:0;
+  }
+  .timeline-item:nth-child(odd)::before,
+  .timeline-item:nth-child(even)::before {
+    left:5px;
+    right:auto;
+    width:calc(2rem - 5px);
   }
   .tl-card,.project-card,.contact-form {
     padding:1.25rem;
@@ -840,6 +891,12 @@ footer a {
   }
 }
 @media print {
+  .timeline::before,.timeline-item::before,.timeline-dot {
+    display:none;
+  }
+  .timeline-item:nth-child(odd),.timeline-item:nth-child(even) {
+    padding:0 0 1rem;
+  }
   body {
     background:white;
     color:#111;
