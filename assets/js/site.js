@@ -17,6 +17,6 @@
   });
   document.addEventListener('click', event => { if (!nav.contains(event.target)) setOpen(false); });
   nav.addEventListener('focusout', event => { if (!nav.contains(event.relatedTarget)) setOpen(false); });
-  window.matchMedia('(min-width: 1025px)').addEventListener('change', () => setOpen(false));
+  window.matchMedia('(min-width: 761px)').addEventListener('change', () => setOpen(false));
   nav.classList.add('nav-enhanced');
 })();
