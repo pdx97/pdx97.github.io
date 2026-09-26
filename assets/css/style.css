@@ -232,48 +232,73 @@ p { margin: 0 0 14px; }
 .plain-list { margin: 0; padding-left: 20px; }
 .plain-list li { margin: 4px 0; }
 
-/* ---------- Experience timeline: cards alternate left/right of a central spine ---------- */
+/* ---------- Experience timeline: cards alternate left/right of a central spine ----------
+   With JS (assets/js/timeline.js) the spine draws downward and cards slide in
+   from their side as they scroll into view. */
 
 .timeline { position: relative; list-style: none; margin: 28px 0 0; padding: 0; }
 .timeline::before {
   content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
-  width: 2px; transform: translateX(-50%);
+  width: 2px; transform: translateX(-50%); transform-origin: top center;
   background: linear-gradient(to bottom, var(--link), var(--rule));
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.timeline-item { position: relative; padding: 0 0 32px; }
+.timeline-item { position: relative; display: flex; padding: 0 0 36px; }
 .timeline-item:last-child { padding-bottom: 0; }
-.timeline-item:nth-child(odd) { padding-right: calc(50% + 28px); }
-.timeline-item:nth-child(even) { padding-left: calc(50% + 28px); }
+.timeline-item:nth-child(odd) { padding-right: calc(50% + 32px); justify-content: flex-end; }
+.timeline-item:nth-child(even) { padding-left: calc(50% + 32px); }
 .timeline-item::before {
-  content: ""; position: absolute; top: 30px; width: 28px; height: 1px; background: var(--rule);
+  content: ""; position: absolute; top: 26px; width: 32px; height: 1px; background: var(--rule);
 }
 .timeline-item:nth-child(odd)::before { right: 50%; }
 .timeline-item:nth-child(even)::before { left: 50%; }
 .timeline-dot {
-  position: absolute; left: calc(50% - 6px); top: 24px;
+  position: absolute; left: calc(50% - 6px); top: 20px;
   width: 12px; height: 12px; border-radius: 50%;
   border: 2px solid var(--link); background: var(--bg); z-index: 1;
+  transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s ease;
 }
 .tl-card {
+  width: 100%;
   border: 1px solid var(--rule); border-radius: 6px;
   background: var(--accent-bg); padding: 18px 20px;
+  transition: border-color 0.2s, box-shadow 0.2s,
+              opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.tl-card:hover { border-color: var(--link); box-shadow: 0 4px 14px rgba(26, 91, 171, 0.10); }
+
+/* animation states (only when timeline.js has run) */
+.tl-animate::before { transform: translateX(-50%) scaleY(0); }
+.tl-animate.tl-started::before { transform: translateX(-50%) scaleY(1); }
+.tl-animate .timeline-dot { border-color: var(--rule); }
+.tl-animate .tl-visible .timeline-dot { border-color: var(--link); background: var(--link); transform: scale(1.3); }
+.tl-animate .tl-card { opacity: 0; }
+.tl-animate .timeline-item:nth-child(odd) .tl-card { transform: translateX(-28px); }
+.tl-animate .timeline-item:nth-child(even) .tl-card { transform: translateX(28px); }
+.tl-animate .timeline-item.tl-visible .tl-card { opacity: 1; transform: translateX(0); }
+
 .org-logo {
   display: block; height: 40px; width: auto; max-width: 150px; object-fit: contain;
   background: #fff; padding: 4px 6px; border-radius: 4px; margin-bottom: 10px;
 }
+.tl-card h3 { font-size: 1rem; }
 .tl-meta {
   font-family: var(--sans); font-size: 0.8rem; color: var(--faint);
-  display: flex; flex-wrap: wrap; gap: 2px 16px; margin: 2px 0 6px;
+  display: flex; flex-wrap: wrap; gap: 2px 16px; margin: 4px 0 8px;
 }
-.tl-card ul { margin: 0; padding-left: 18px; font-size: 0.95rem; }
+.tl-meta i { margin-right: 3px; }
+.tl-card ul { margin: 0; padding-left: 18px; font-size: 0.93rem; }
 .tl-card li { margin: 3px 0; }
 
 @media (max-width: 760px) {
-  .timeline::before { left: 6px; }
-  .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { padding-left: 32px; padding-right: 0; }
+  .timeline::before, .tl-animate::before, .tl-animate.tl-started::before { left: 6px; }
+  .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { padding-left: 32px; padding-right: 0; justify-content: flex-start; }
   .timeline-dot { left: 0; }
   .timeline-item:nth-child(odd)::before, .timeline-item:nth-child(even)::before { left: 7px; right: auto; width: 25px; }
+  .tl-animate .timeline-item:nth-child(odd) .tl-card,
+  .tl-animate .timeline-item:nth-child(even) .tl-card { transform: translateX(16px); }
+  .tl-animate .timeline-item.tl-visible .tl-card { transform: translateX(0); }
 }
 
 /* ---------- Projects ---------- */
