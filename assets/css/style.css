@@ -232,6 +232,50 @@ p { margin: 0 0 14px; }
 .plain-list { margin: 0; padding-left: 20px; }
 .plain-list li { margin: 4px 0; }
 
+/* ---------- Experience timeline: cards alternate left/right of a central spine ---------- */
+
+.timeline { position: relative; list-style: none; margin: 28px 0 0; padding: 0; }
+.timeline::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 2px; transform: translateX(-50%);
+  background: linear-gradient(to bottom, var(--link), var(--rule));
+}
+.timeline-item { position: relative; padding: 0 0 32px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item:nth-child(odd) { padding-right: calc(50% + 28px); }
+.timeline-item:nth-child(even) { padding-left: calc(50% + 28px); }
+.timeline-item::before {
+  content: ""; position: absolute; top: 30px; width: 28px; height: 1px; background: var(--rule);
+}
+.timeline-item:nth-child(odd)::before { right: 50%; }
+.timeline-item:nth-child(even)::before { left: 50%; }
+.timeline-dot {
+  position: absolute; left: calc(50% - 6px); top: 24px;
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--link); background: var(--bg); z-index: 1;
+}
+.tl-card {
+  border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--accent-bg); padding: 18px 20px;
+}
+.org-logo {
+  display: block; height: 40px; width: auto; max-width: 150px; object-fit: contain;
+  background: #fff; padding: 4px 6px; border-radius: 4px; margin-bottom: 10px;
+}
+.tl-meta {
+  font-family: var(--sans); font-size: 0.8rem; color: var(--faint);
+  display: flex; flex-wrap: wrap; gap: 2px 16px; margin: 2px 0 6px;
+}
+.tl-card ul { margin: 0; padding-left: 18px; font-size: 0.95rem; }
+.tl-card li { margin: 3px 0; }
+
+@media (max-width: 760px) {
+  .timeline::before { left: 6px; }
+  .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { padding-left: 32px; padding-right: 0; }
+  .timeline-dot { left: 0; }
+  .timeline-item:nth-child(odd)::before, .timeline-item:nth-child(even)::before { left: 7px; right: auto; width: 25px; }
+}
+
 /* ---------- Projects ---------- */
 
 .project { padding: 10px 0; }
@@ -274,6 +318,8 @@ footer a { color: var(--faint); }
 
 @media print {
   nav, footer, .skip-link { display: none; }
+  .timeline::before, .timeline-item::before, .timeline-dot { display: none; }
+  .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { padding: 0 0 12px; }
   body { font-size: 11pt; }
   a { color: inherit; }
 }
