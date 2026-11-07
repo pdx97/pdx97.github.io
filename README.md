@@ -1,4 +1,4 @@
-# Prakhar Dixit's website
+# Prakhar's website
 
 Static academic homepage hosted by GitHub Pages. No build step.
 
